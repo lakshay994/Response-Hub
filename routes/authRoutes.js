@@ -6,7 +6,11 @@ module.exports = (app) => {
         })
     );
 
-    app.get('/auth/google/callback', passport.authenticate('google'));
+    app.get('/auth/google/callback', 
+            passport.authenticate('google'),
+            (req, res) => {
+                res.redirect('/surveys')
+            });
 
     app.get('/api/current_user', (req, res) => {
         // req.user - user object is binded automatically by the passport library
@@ -17,6 +21,6 @@ module.exports = (app) => {
 
         //req.logout - logout is also added by passport.js automatically
         req.logout();
-        res.send(req.user);
+        res.redirect('/');
     })
 }
