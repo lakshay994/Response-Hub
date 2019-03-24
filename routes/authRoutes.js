@@ -7,10 +7,11 @@ module.exports = (app) => {
     );
 
     app.get('/auth/google/callback', 
-            passport.authenticate('google'),
-            (req, res) => {
-                res.redirect('/surveys')
-            });
+        passport.authenticate('google'),
+        (req, res) => {
+            res.redirect('/surveys')
+        }
+    );
 
     app.get('/api/current_user', (req, res) => {
         // req.user - user object is binded automatically by the passport library
