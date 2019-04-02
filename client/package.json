@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "lodash": "^4.17.11",
     "materialize-css": "^1.0.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
@@ -12,6 +13,7 @@
     "react-scripts": "2.1.8",
     "react-stripe-checkout": "^2.6.3",
     "redux": "^4.0.1",
+    "redux-form": "^8.1.0",
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
